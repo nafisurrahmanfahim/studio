@@ -1,0 +1,28 @@
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* small custom utilities */
+:root {
+  --glass: rgba(255,255,255,0.55);
+}
+
+/* subtle page bg */
+body {
+  @apply bg-tealLight text-gray-800;
+}
+
+/* custom hero gradient */
+.hero-bg {
+  background: linear-gradient(90deg, rgba(12,82,77,0.05), rgba(12,82,77,0.02));
+}
+
+/* card hover lift */
+.card-anim {
+  transition: transform .35s cubic-bezier(.2,.9,.3,1), box-shadow .35s;
+}
+.card-anim:hover {
+  transform: translateY(-8px) rotateZ(-0.2deg);
+  box-shadow: 0 20px 40px rgba(2,6,23,0.08);
+}
